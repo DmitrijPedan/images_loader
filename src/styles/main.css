@@ -1,0 +1,141 @@
+:root {
+    --accent-color: #52a889;
+}
+
+body {
+    background-color: #d2d2d2;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    padding: 10px 25px;
+    margin: 15px;
+    position: relative;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn.accent-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn:hover {
+    border-color: #458770;
+    color: #458770;
+}
+
+.btn.accent-btn:hover {
+    background-color: #458770;
+    color: white;
+}
+
+.btn:disabled {
+    background-color: #d2d2d2;
+    border-color: #d2d2d2;
+    cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+    background-color: #d2d2d2;
+    border-color: #d2d2d2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.thumbnails .preview {
+    width: 250px;
+    height: 180px;
+    border-radius: 5px;
+    margin: 15px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview .rem,
+.preview .size,
+.preview .name {
+    position: absolute;
+    padding: 3px 5px;
+    background-color: rgba(255,255,255, 0.7);
+    transition: transform .2s;
+}
+
+.preview .rem {
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    color: red;
+    cursor: pointer;
+    padding: 3px 10px;
+}
+
+.preview .size {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+.preview .name {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(100%);
+}
+
+.preview:hover .rem,
+.preview:hover .name,
+.preview:hover .size {
+    transform: none;
+}
+
+.preview.removed {
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.progress {
+    height: 15px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    background-color: #06d706;
+    transition: width .3s;
+}
